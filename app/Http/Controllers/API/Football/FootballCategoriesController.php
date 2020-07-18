@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\API\Football;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Models\Football\FootballCategory;
 
-class FootballCategoriesController extends Controller
+class FootballCategoriesController extends BaseFootballController
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,9 @@ class FootballCategoriesController extends Controller
      */
     public function index()
     {
-        //
+        $data = FootballCategory::all();
+        return response()->json($data);
+
     }
 
     /**

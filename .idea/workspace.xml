@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3936546e-18f9-4db9-964c-b4fd3c5ece5b" name="Default Changelist" comment="" />
+    <list default="true" id="3936546e-18f9-4db9-964c-b4fd3c5ece5b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Algorithms/Backend/Parsing/FootballParser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Algorithms/Frontend/Calculation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ResultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/APIController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/APIController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/Football/BaseFootballController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/BaseFootballController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/Football/FootballCategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/FootballCategoriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,11 +158,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers/API" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/API" />
       <recent name="$PROJECT_DIR$/app/Models" />
     </key>
@@ -187,7 +199,7 @@
       <updated>1594245436189</updated>
       <workItem from="1594245442618" duration="25063000" />
       <workItem from="1594538382956" duration="745000" />
-      <workItem from="1595065396652" duration="6158000" />
+      <workItem from="1595065396652" duration="9617000" />
     </task>
     <task id="LOCAL-00001" summary="JWT auth">
       <created>1595065477795</created>
@@ -217,24 +229,42 @@
       <option name="project" value="LOCAL" />
       <updated>1595074652485</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="merge with old project (continue)">
+      <created>1595074952842</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1595074952842</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="JWT auth" />
     <MESSAGE value="Swagger install" />
     <MESSAGE value="IDE-helper dev install" />
     <MESSAGE value="merge with old project" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge with old project" />
+    <MESSAGE value="merge with old project (continue)" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge with old project (continue)" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="314" y="25" key="CommitChangelistDialog2" timestamp="1595074919446">
+    <state x="314" y="25" key="CommitChangelistDialog2" timestamp="1595074952663">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state x="314" y="25" key="CommitChangelistDialog2/0.23.1440.799@0.23.1440.799" timestamp="1595074919446" />
+    <state x="314" y="25" key="CommitChangelistDialog2/0.23.1440.799@0.23.1440.799" timestamp="1595074952663" />
     <state x="314" y="25" key="CommitChangelistDialog2/0.23.1440.804@0.23.1440.804" timestamp="1595067137704" />
     <state x="314" y="25" key="CommitChangelistDialog2/0.23.1440.806@0.23.1440.806" timestamp="1595066885503" />
     <state x="403" y="255" key="com.intellij.ide.util.TipDialog" timestamp="1594538715779">

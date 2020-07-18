@@ -4,11 +4,9 @@ namespace App\Http\Controllers\API\Football;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\API\APIController;
 
-class BaseFootballController extends Controller
+class BaseFootballController extends APIController
 {
-    public function __construct()
-    {
 
-    }
 }

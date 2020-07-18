@@ -20,7 +20,8 @@ class UserController extends Controller
     public function register(Request $request)
     {
         $validator = Validator::make($request->json()->all() , [
-            'name' => 'required|string|max:255',
+            'first_name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6',
         ]);
@@ -30,9 +31,11 @@ class UserController extends Controller
         }
 
         $user = User::create([
-            'name' => $request->json()->get('name'),
+            'first_name' => $request->json()->get('first_name'),
+            'last_name' => $request->json()->get('last_name'),
             'email' => $request->json()->get('email'),
             'password' => Hash::make($request->json()->get('password')),
+            'role_id' => 1,
         ]);
 
         $token = JWTAuth::fromUser($user);
