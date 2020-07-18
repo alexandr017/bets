@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3936546e-18f9-4db9-964c-b4fd3c5ece5b" name="Default Changelist" comment="">
+    <list default="true" id="3936546e-18f9-4db9-964c-b4fd3c5ece5b" name="Default Changelist" comment="IDE-helper dev install">
       <change beforePath="$PROJECT_DIR$/.idea/bets.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bets.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,6 +134,15 @@
       <path value="$PROJECT_DIR$/vendor/darkaonline/l5-swagger" />
       <path value="$PROJECT_DIR$/vendor/zircote/swagger-php" />
       <path value="$PROJECT_DIR$/vendor/swagger-api/swagger-ui" />
+      <path value="$PROJECT_DIR$/vendor/seld/jsonlint" />
+      <path value="$PROJECT_DIR$/vendor/seld/phar-utils" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-ide-helper" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/justinrainbow/json-schema" />
     </include_path>
   </component>
   <component name="ProjectId" id="1eQEV1HnxWKRTdJR51TVOHA55F8" />
@@ -178,7 +189,7 @@
       <updated>1594245436189</updated>
       <workItem from="1594245442618" duration="25063000" />
       <workItem from="1594538382956" duration="745000" />
-      <workItem from="1595065396652" duration="838000" />
+      <workItem from="1595065396652" duration="1109000" />
     </task>
     <task id="LOCAL-00001" summary="JWT auth">
       <created>1595065477795</created>
@@ -187,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595065477795</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Swagger install">
+      <created>1595066885701</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1595066885701</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,13 +213,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="JWT auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="JWT auth" />
+    <MESSAGE value="Swagger install" />
+    <MESSAGE value="IDE-helper dev install" />
+    <option name="LAST_COMMIT_MESSAGE" value="IDE-helper dev install" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="314" y="25" key="CommitChangelistDialog2" timestamp="1595065477485">
-      <screen x="0" y="23" width="1440" height="806" />
+    <state x="314" y="25" key="CommitChangelistDialog2" timestamp="1595067111735">
+      <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="314" y="25" key="CommitChangelistDialog2/0.23.1440.806@0.23.1440.806" timestamp="1595065477485" />
+    <state x="314" y="25" key="CommitChangelistDialog2/0.23.1440.804@0.23.1440.804" timestamp="1595067111735" />
+    <state x="314" y="25" key="CommitChangelistDialog2/0.23.1440.806@0.23.1440.806" timestamp="1595066885503" />
     <state x="403" y="255" key="com.intellij.ide.util.TipDialog" timestamp="1594538715779">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
