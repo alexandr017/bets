@@ -29,3 +29,15 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
+
+// роуты для футбола
+Route::group(['prefix' => 'football', 'namespace' => 'Football', 'as' => 'football.', 'middleware' => 'auth:api'], function () {
+    Route::resource('categories', 'FootballCategoriesController');
+    Route::resource('tours', 'FootballToursController');
+    Route::resource('matches', 'FootballMatchesController');
+    Route::resource('bets', 'FootballBetsController');
+});
+
+
+
+

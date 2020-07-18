@@ -14,3 +14,5 @@
 */
 
 //Auth::routes();
+
+//Route::resource('user')
