@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3936546e-18f9-4db9-964c-b4fd3c5ece5b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/BaseFootballController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/FootballBetsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/FootballCategoriesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/FootballMatchesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/FootballToursController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Football/FootballBet.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Football/FootballCategory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Football/FootballMatch.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Football/FootballTour.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Project/Balance.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Project/Options.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Tickets/Ticket.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Tickets/TicketMessage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="3936546e-18f9-4db9-964c-b4fd3c5ece5b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -206,7 +187,7 @@
       <updated>1594245436189</updated>
       <workItem from="1594245442618" duration="25063000" />
       <workItem from="1594538382956" duration="745000" />
-      <workItem from="1595065396652" duration="5903000" />
+      <workItem from="1595065396652" duration="6158000" />
     </task>
     <task id="LOCAL-00001" summary="JWT auth">
       <created>1595065477795</created>
@@ -229,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595067137903</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="merge with old project">
+      <created>1595074652485</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1595074652485</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,13 +227,14 @@
     <MESSAGE value="JWT auth" />
     <MESSAGE value="Swagger install" />
     <MESSAGE value="IDE-helper dev install" />
-    <option name="LAST_COMMIT_MESSAGE" value="IDE-helper dev install" />
+    <MESSAGE value="merge with old project" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge with old project" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="314" y="25" key="CommitChangelistDialog2" timestamp="1595074638272">
+    <state x="314" y="25" key="CommitChangelistDialog2" timestamp="1595074919446">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state x="314" y="25" key="CommitChangelistDialog2/0.23.1440.799@0.23.1440.799" timestamp="1595074638272" />
+    <state x="314" y="25" key="CommitChangelistDialog2/0.23.1440.799@0.23.1440.799" timestamp="1595074919446" />
     <state x="314" y="25" key="CommitChangelistDialog2/0.23.1440.804@0.23.1440.804" timestamp="1595067137704" />
     <state x="314" y="25" key="CommitChangelistDialog2/0.23.1440.806@0.23.1440.806" timestamp="1595066885503" />
     <state x="403" y="255" key="com.intellij.ide.util.TipDialog" timestamp="1594538715779">
