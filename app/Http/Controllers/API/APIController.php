@@ -40,8 +40,29 @@ use Tymon\JWTAuth\JWTManager as JWT;
  * )
  */
 
+
+
 class APIController extends Controller
 {
+    protected const ADMIN_ROLE = 1;
+
+    protected function isAdmin(Request $request)
+    {
+        return $request->user()->role_id == self::ADMIN_ROLE;
+    }
+
+    protected function isMyEntity(Request $request, $entity)
+    {
+        if (isset($entity->user_id)) {
+            if ( (int) $entity->user_id === $request->user()->id) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+
     public function __construct()
     {
         try {

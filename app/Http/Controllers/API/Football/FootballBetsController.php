@@ -82,4 +82,11 @@ class FootballBetsController extends Controller
     {
         //
     }
+
+    // Все
+    //На этой неделе
+    //В этом месяце
+    //Долгострочные
+    //Избранные
+    // история ставок
 }

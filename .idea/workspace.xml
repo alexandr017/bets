@@ -2,15 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3936546e-18f9-4db9-964c-b4fd3c5ece5b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Algorithms/Backend/Parsing/FootballParser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Algorithms/Frontend/Calculation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ResultController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Helpers/ClearData.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/APIController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/APIController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/Football/BaseFootballController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/BaseFootballController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/Football/FootballBetsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/FootballBetsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/Football/FootballCategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/FootballCategoriesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/Football/FootballMatchesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/FootballMatchesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/Football/FootballToursController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/FootballToursController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,10 +161,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers" />
@@ -199,7 +210,10 @@
       <updated>1594245436189</updated>
       <workItem from="1594245442618" duration="25063000" />
       <workItem from="1594538382956" duration="745000" />
-      <workItem from="1595065396652" duration="9617000" />
+      <workItem from="1595065396652" duration="53308000" />
+      <workItem from="1595705538732" duration="2681000" />
+      <workItem from="1596898820687" duration="266000" />
+      <workItem from="1598111080393" duration="8804000" />
     </task>
     <task id="LOCAL-00001" summary="JWT auth">
       <created>1595065477795</created>
@@ -236,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595074952842</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Test registration, auth, football categories">
+      <created>1595079772874</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1595079772874</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,15 +279,41 @@
     <MESSAGE value="IDE-helper dev install" />
     <MESSAGE value="merge with old project" />
     <MESSAGE value="merge with old project (continue)" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge with old project (continue)" />
+    <MESSAGE value="Test registration, auth, football categories" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test registration, auth, football categories" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="314" y="25" key="CommitChangelistDialog2" timestamp="1595074952663">
+    <state x="455" y="232" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598121623722">
+      <screen x="0" y="23" width="1440" height="798" />
+    </state>
+    <state x="455" y="232" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.798@0.23.1440.798" timestamp="1598121623722" />
+    <state x="455" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1598115462990">
+      <screen x="0" y="23" width="1440" height="798" />
+    </state>
+    <state x="455" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.798@0.23.1440.798" timestamp="1598115462990" />
+    <state x="458" y="184" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598121515192">
+      <screen x="0" y="23" width="1440" height="798" />
+    </state>
+    <state x="458" y="184" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.798@0.23.1440.798" timestamp="1598121515192" />
+    <state x="314" y="25" key="CommitChangelistDialog2" timestamp="1595079772616">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state x="314" y="25" key="CommitChangelistDialog2/0.23.1440.799@0.23.1440.799" timestamp="1595074952663" />
+    <state x="314" y="25" key="CommitChangelistDialog2/0.23.1440.799@0.23.1440.799" timestamp="1595079772616" />
     <state x="314" y="25" key="CommitChangelistDialog2/0.23.1440.804@0.23.1440.804" timestamp="1595067137704" />
     <state x="314" y="25" key="CommitChangelistDialog2/0.23.1440.806@0.23.1440.806" timestamp="1595066885503" />
+    <state x="486" y="245" key="NewPhpClassDialog" timestamp="1598116074078">
+      <screen x="0" y="23" width="1440" height="798" />
+    </state>
+    <state x="486" y="245" key="NewPhpClassDialog/0.23.1440.798@0.23.1440.798" timestamp="1598116074078" />
+    <state x="541" y="350" key="NewPhpFileDialog" timestamp="1598116091262">
+      <screen x="0" y="23" width="1440" height="798" />
+    </state>
+    <state x="541" y="350" key="NewPhpFileDialog/0.23.1440.798@0.23.1440.798" timestamp="1598116091262" />
+    <state x="541" y="352" key="NewPhpFileDialog/0.23.1440.804@0.23.1440.804" timestamp="1598112842516" />
+    <state x="101" y="123" width="1239" height="599" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1595706246807">
+      <screen x="0" y="23" width="1440" height="799" />
+    </state>
+    <state x="101" y="123" width="1239" height="599" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.799@0.23.1440.799" timestamp="1595706246807" />
     <state x="403" y="255" key="com.intellij.ide.util.TipDialog" timestamp="1594538715779">
       <screen x="0" y="23" width="1440" height="799" />
     </state>

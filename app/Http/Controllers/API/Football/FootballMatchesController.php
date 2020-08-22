@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\API\Football;
 
+use App\Models\Football\FootballMatch;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,13 @@ class FootballMatchesController extends Controller
      */
     public function index()
     {
-        //
+        $data = FootballMatch::all();
+
+        return response()->json([
+            'status' => 200,
+            'details' => 'OK',
+            'data' => $data
+        ]);
     }
 
     /**
@@ -35,7 +42,24 @@ class FootballMatchesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if (! $this->isAdmin($request)) {
+            return response()->json([
+                'status' => 403,
+                'details' => 'Access is denied',
+                'data' => []
+            ], 403);
+        }
+
+
+        $data = clearData($request->all());
+        $tour = new FootballMatch($data);
+        $tour->save();
+
+        return response()->json([
+            'status' => 201,
+            'details' => 'Created',
+            'data' => $tour
+        ], 201);
     }
 
     /**
@@ -44,9 +68,26 @@ class FootballMatchesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request, $id)
     {
-        //
+        if (! $this->isAdmin($request)) {
+            return response()->json([
+                'status' => 403,
+                'details' => 'Access is denied',
+                'data' => []
+            ], 403);
+        }
+
+
+        $data = clearData($request->all());
+        $tour = new FootballMatch($data);
+        $tour->save();
+
+        return response()->json([
+            'status' => 201,
+            'details' => 'Created',
+            'data' => $tour
+        ], 201);
     }
 
     /**
@@ -81,5 +122,10 @@ class FootballMatchesController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function pastMatches()
+    {
+
     }
 }

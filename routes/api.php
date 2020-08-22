@@ -33,6 +33,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // роуты для футбола
 Route::group(['prefix' => 'football', 'namespace' => 'API\Football', 'as' => 'football.', 'middleware' => 'api'], function () {
     Route::resource('categories', 'FootballCategoriesController');
+    Route::get('tours/categories/{id}', 'FootballToursController@getToursByCategoryID')->name('torus.get_tours_by_category_id');
     Route::resource('tours', 'FootballToursController');
     Route::resource('matches', 'FootballMatchesController');
     Route::resource('bets', 'FootballBetsController');

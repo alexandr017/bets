@@ -16,3 +16,7 @@
 //Auth::routes();
 
 //Route::resource('user')
+
+Route::get('/', function (){
+   return 'Главная страница проекта. Лендинг, который не требует авторизации.';
+});
