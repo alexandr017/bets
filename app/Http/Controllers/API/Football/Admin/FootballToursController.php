@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\API\Football;
+namespace App\Http\Controllers\API\Football\Admin;
 
 use App\Models\Football\FootballTour;
 use Illuminate\Http\Request;
 use App\Http\Requests\API\Football\FootballTourRequest;
 
-class FootballToursController extends BaseFootballController
+class FootballToursController extends AdminFootballController
 {
     /**
      * Display a listing of the resource.
@@ -17,11 +17,7 @@ class FootballToursController extends BaseFootballController
     {
         $data = FootballTour::all();
 
-        return response()->json([
-            'status' => 200,
-            'details' => 'OK',
-            'data' => $data
-        ]);
+        return ResponseAPI($data);
     }
 
     /**
@@ -42,24 +38,11 @@ class FootballToursController extends BaseFootballController
      */
     public function store(FootballTourRequest $request)
     {
-        if (! $this->isAdmin($request)) {
-            return response()->json([
-                'status' => 403,
-                'details' => 'Access is denied',
-                'data' => []
-            ], 403);
-        }
-
-
         $data = clearData($request->all());
         $tour = new FootballTour($data);
         $tour->save();
 
-        return response()->json([
-            'status' => 201,
-            'details' => 'Created',
-            'data' => $tour
-        ], 201);
+        return ResponseAPI($tour, 201, 'Created');
     }
 
     /**
@@ -72,11 +55,7 @@ class FootballToursController extends BaseFootballController
     {
         $data = FootballTour::findOrFail($id);
 
-        return response()->json([
-            'status' => 200,
-            'details' => 'OK',
-            'data' => $data
-        ]);
+        return ResponseAPI($data);
     }
 
     /**
@@ -89,11 +68,7 @@ class FootballToursController extends BaseFootballController
     {
         $data = FootballTour::findOrFail($id);
 
-        return response()->json([
-            'status' => 200,
-            'details' => 'OK',
-            'data' => $data
-        ]);
+        return ResponseAPI($data);
     }
 
     /**
@@ -105,23 +80,11 @@ class FootballToursController extends BaseFootballController
      */
     public function update(FootballTourRequest $request, $id)
     {
-        if (! $this->isAdmin($request)) {
-            return response()->json([
-                'status' => 403,
-                'details' => 'Access is denied',
-                'data' => []
-            ], 403);
-        }
-
         $data = clearData($request->all());
         $tour = FootballTour::findOrFaild($id);
         $tour->update($data);
 
-        return response()->json([
-            'status' => 202,
-            'details' => 'Updated',
-            'data' => $tour
-        ], 202);
+        return ResponseAPI($tour, 202, 'Updated');
     }
 
     /**
@@ -130,35 +93,14 @@ class FootballToursController extends BaseFootballController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(FootballTourRequest $request, $id)
+    public function destroy($id)
     {
-        if (! $this->isAdmin($request)) {
-            return response()->json([
-                'status' => 403,
-                'details' => 'Access is denied',
-                'data' => []
-            ], 403);
-        }
-
         $tour = FootballTour::findOrFaild($id);
         $tour->delete();
         // удалить все привязки
 
-        return response()->json([
-            'status' => 410,
-            'details' => 'Deleted',
-            'data' => []
-        ], 410);
+        return ResponseAPI([], 410, 'Deleted');
     }
 
-    public function getToursByCategoryID($id)
-    {
-        $data = FootballTour::where(['football_category_id' => $id])->get();
 
-        return response()->json([
-            'status' => 200,
-            'details' => 'OK',
-            'data' => $data
-        ]);
-    }
 }

@@ -2,18 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3936546e-18f9-4db9-964c-b4fd3c5ece5b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Helpers/ClearData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Helpers/ResponseAPI.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/Admin/FootballMatchesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/APIController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/APIController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/Football/FootballBetsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/FootballBetsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/Football/FootballCategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/FootballCategoriesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/Football/FootballMatchesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/FootballMatchesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/Football/FootballToursController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/FootballToursController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/Football/FootballBetsController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/Football/FootballCategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/Admin/FootballCategoriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/Football/FootballMatchesController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/Football/FootballToursController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/Admin/FootballToursController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/API/Football/FootballBetRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/API/Football/FootballBetRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/API/Football/FootballMatchRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/API/Football/FootballMatchRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/API/Football/FootballTourRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/API/Football/FootballTourRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Football/FootballMatch.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Football/FootballMatch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_17_181006_create_football_matches.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_17_181006_create_football_matches.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +154,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1eQEV1HnxWKRTdJR51TVOHA55F8" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -166,18 +171,21 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Blade&#10;XML" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/API" />
       <recent name="$PROJECT_DIR$/app/Models" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/API/Football/Admin" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/API/Football" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -213,7 +221,8 @@
       <workItem from="1595065396652" duration="53308000" />
       <workItem from="1595705538732" duration="2681000" />
       <workItem from="1596898820687" duration="266000" />
-      <workItem from="1598111080393" duration="8804000" />
+      <workItem from="1598111080393" duration="68338000" />
+      <workItem from="1598647136110" duration="63312000" />
     </task>
     <task id="LOCAL-00001" summary="JWT auth">
       <created>1595065477795</created>
@@ -257,7 +266,21 @@
       <option name="project" value="LOCAL" />
       <updated>1595079772874</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="football dev">
+      <created>1598121862193</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1598121862193</updated>
+    </task>
+    <task id="LOCAL-00008" summary="football dev">
+      <created>1598121940121</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1598121940121</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,7 +303,8 @@
     <MESSAGE value="merge with old project" />
     <MESSAGE value="merge with old project (continue)" />
     <MESSAGE value="Test registration, auth, football categories" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test registration, auth, football categories" />
+    <MESSAGE value="football dev" />
+    <option name="LAST_COMMIT_MESSAGE" value="football dev" />
   </component>
   <component name="WindowStateProjectService">
     <state x="455" y="232" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598121623722">
@@ -291,25 +315,39 @@
       <screen x="0" y="23" width="1440" height="798" />
     </state>
     <state x="455" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.798@0.23.1440.798" timestamp="1598115462990" />
-    <state x="458" y="184" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598121515192">
+    <state x="458" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599256282872">
+      <screen x="0" y="23" width="1440" height="806" />
+    </state>
+    <state x="458" y="184" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.798/1440.23.1920.1057@0.23.1440.798" timestamp="1598650735356" />
+    <state x="458" y="184" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.798@0.23.1440.798" timestamp="1599130769767" />
+    <state x="458" y="185" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.804@0.23.1440.804" timestamp="1599250058044" />
+    <state x="458" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.806@0.23.1440.806" timestamp="1599256282872" />
+    <state x="458" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.808@0.23.1440.808" timestamp="1599255920739" />
+    <state x="379" y="83" key="#phpunit.xml" timestamp="1598650397486">
       <screen x="0" y="23" width="1440" height="798" />
     </state>
-    <state x="458" y="184" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.798@0.23.1440.798" timestamp="1598121515192" />
-    <state x="314" y="25" key="CommitChangelistDialog2" timestamp="1595079772616">
-      <screen x="0" y="23" width="1440" height="799" />
+    <state x="379" y="83" key="#phpunit.xml/0.23.1440.798/1440.23.1920.1057@0.23.1440.798" timestamp="1598650397486" />
+    <state x="324" y="31" key="CommitChangelistDialog2" timestamp="1599257072715">
+      <screen x="0" y="23" width="1440" height="804" />
     </state>
+    <state x="526" y="26" key="CommitChangelistDialog2/0.23.1440.798@0.23.1440.798" timestamp="1598121939936" />
     <state x="314" y="25" key="CommitChangelistDialog2/0.23.1440.799@0.23.1440.799" timestamp="1595079772616" />
-    <state x="314" y="25" key="CommitChangelistDialog2/0.23.1440.804@0.23.1440.804" timestamp="1595067137704" />
+    <state x="324" y="31" key="CommitChangelistDialog2/0.23.1440.804@0.23.1440.804" timestamp="1599257072715" />
     <state x="314" y="25" key="CommitChangelistDialog2/0.23.1440.806@0.23.1440.806" timestamp="1595066885503" />
     <state x="486" y="245" key="NewPhpClassDialog" timestamp="1598116074078">
       <screen x="0" y="23" width="1440" height="798" />
     </state>
     <state x="486" y="245" key="NewPhpClassDialog/0.23.1440.798@0.23.1440.798" timestamp="1598116074078" />
-    <state x="541" y="350" key="NewPhpFileDialog" timestamp="1598116091262">
-      <screen x="0" y="23" width="1440" height="798" />
+    <state x="541" y="353" key="NewPhpFileDialog" timestamp="1599250256429">
+      <screen x="0" y="23" width="1440" height="806" />
     </state>
     <state x="541" y="350" key="NewPhpFileDialog/0.23.1440.798@0.23.1440.798" timestamp="1598116091262" />
     <state x="541" y="352" key="NewPhpFileDialog/0.23.1440.804@0.23.1440.804" timestamp="1598112842516" />
+    <state x="541" y="353" key="NewPhpFileDialog/0.23.1440.806@0.23.1440.806" timestamp="1599250256429" />
+    <state x="320" y="162" key="Vcs.Push.Dialog.v2" timestamp="1598121973793">
+      <screen x="0" y="23" width="1440" height="798" />
+    </state>
+    <state x="320" y="162" key="Vcs.Push.Dialog.v2/0.23.1440.798@0.23.1440.798" timestamp="1598121973793" />
     <state x="101" y="123" width="1239" height="599" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1595706246807">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
@@ -318,5 +356,13 @@
       <screen x="0" y="23" width="1440" height="799" />
     </state>
     <state x="403" y="255" key="com.intellij.ide.util.TipDialog/0.23.1440.799@0.23.1440.799" timestamp="1594538715779" />
+    <state x="385" y="191" width="670" height="675" key="run.anything.popup" timestamp="1598439471631">
+      <screen x="0" y="23" width="1440" height="798" />
+    </state>
+    <state x="385" y="191" width="670" height="675" key="run.anything.popup/0.23.1440.798@0.23.1440.798" timestamp="1598439471631" />
+    <state x="385" y="145" width="670" height="676" key="search.everywhere.popup" timestamp="1598648523151">
+      <screen x="0" y="23" width="1440" height="798" />
+    </state>
+    <state x="385" y="145" width="670" height="676" key="search.everywhere.popup/0.23.1440.798/1440.23.1920.1057@0.23.1440.798" timestamp="1598648523151" />
   </component>
 </project>

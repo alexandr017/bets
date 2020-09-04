@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Auth;
 
 use Tymon\JWTAuth\Facades\JWTAuth;
 use Tymon\JWTAuth\Facades\JWTFactory;
@@ -51,7 +52,8 @@ class APIController extends Controller
         return $request->user()->role_id == self::ADMIN_ROLE;
     }
 
-    protected function isMyEntity(Request $request, $entity)
+
+    protected function isUserEntity(Request $request, $entity)
     {
         if (isset($entity->user_id)) {
             if ( (int) $entity->user_id === $request->user()->id) {
@@ -76,6 +78,7 @@ class APIController extends Controller
         } catch (Tymon\JWTAuth\Exceptions\JWTException $e) {
             return response()->json(['token_absent'], $e->getStatusCode());
         }
+
         return response()->json(compact('user'));
     }
 }

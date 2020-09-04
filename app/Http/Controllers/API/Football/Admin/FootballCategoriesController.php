@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\API\Football;
+namespace App\Http\Controllers\API\Football\Admin;
 
 use Illuminate\Http\Request;
 use App\Models\Football\FootballCategory;
 use App\Http\Requests\API\Football\FootballCategoryRequest;
+use Auth;
 
-class FootballCategoriesController extends BaseFootballController
+class FootballCategoriesController extends AdminFootballController
 {
     /**
      * Display a listing of the resource.
@@ -17,11 +18,7 @@ class FootballCategoriesController extends BaseFootballController
     {
         $data = FootballCategory::all();
 
-        return response()->json([
-            'status' => 200,
-            'details' => 'OK',
-            'data' => $data
-        ]);
+        return ResponseAPI($data);
     }
 
     /**
@@ -42,24 +39,11 @@ class FootballCategoriesController extends BaseFootballController
      */
     public function store(FootballCategoryRequest $request)
     {
-        if (! $this->isAdmin($request)) {
-            return response()->json([
-                'status' => 403,
-                'details' => 'Access is denied',
-                'data' => []
-            ], 403);
-        }
-
-
         $data = clearData($request->all());
         $category = new FootballCategory($data);
         $category->save();
 
-        return response()->json([
-            'status' => 201,
-            'details' => 'Created',
-            'data' => $category
-        ], 201);
+        return ResponseAPI($category, 201, 'Created');
     }
 
     /**
@@ -72,11 +56,7 @@ class FootballCategoriesController extends BaseFootballController
     {
         $data = FootballCategory::findOrFail($id);
 
-        return response()->json([
-            'status' => 200,
-            'details' => 'OK',
-            'data' => $data
-        ]);
+        return ResponseAPI($data);
     }
 
     /**
@@ -89,11 +69,7 @@ class FootballCategoriesController extends BaseFootballController
     {
         $data = FootballCategory::findOrFail($id);
 
-        return response()->json([
-            'status' => 200,
-            'details' => 'OK',
-            'data' => $data
-        ]);
+        return ResponseAPI($data);
     }
 
     /**
@@ -105,23 +81,11 @@ class FootballCategoriesController extends BaseFootballController
      */
     public function update(FootballCategoryRequest $request, $id)
     {
-        if (! $this->isAdmin($request)) {
-            return response()->json([
-                'status' => 403,
-                'details' => 'Access is denied',
-                'data' => []
-            ], 403);
-        }
-
         $data = clearData($request->all());
         $category = FootballCategory::findOrFaild($id);
         $category->update($data);
 
-        return response()->json([
-            'status' => 202,
-            'details' => 'Updated',
-            'data' => $category
-        ], 202);
+        return ResponseAPI($category, 202, 'Updated');
     }
 
     /**
@@ -132,22 +96,10 @@ class FootballCategoriesController extends BaseFootballController
      */
     public function destroy(Request $request, $id)
     {
-        if (! $this->isAdmin($request)) {
-            return response()->json([
-                'status' => 403,
-                'details' => 'Access is denied',
-                'data' => []
-            ], 403);
-        }
-
         $category = FootballCategory::findOrFaild($id);
         $category->delete();
         // удалить все привязки
 
-        return response()->json([
-            'status' => 410,
-            'details' => 'Deleted',
-            'data' => []
-        ], 410);
+        return ResponseAPI([], 410, 'Deleted');
     }
 }

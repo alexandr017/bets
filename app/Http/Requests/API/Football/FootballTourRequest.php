@@ -25,7 +25,7 @@ class FootballTourRequest extends FormRequest
     {
         return [
             'football_category_id' => ['required', 'integer'],
-            'category_title' => ['required', 'max:255']
+            'tour_title' => ['required', 'max:255']
         ];
     }
 }

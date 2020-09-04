@@ -15,7 +15,13 @@ class FootballMatch extends Model
         'win',
         'player_1_goals',
         'player_2_goals',
+        'game_date',
         'status'
     ];
+
+    public function favorites()
+    {
+        return $this->hasMany(FootballFavoriteMatch::class, 'football_match_id');
+    }
 
 }

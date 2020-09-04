@@ -12,8 +12,10 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        '/api/football/categories*',
-        'api/football/categories*',
+        //'api/football/categories',
+        //'api/football/categories/*',
+        //'api/football/categories/*',
         'api/*',
+
     ];
 }

@@ -13,7 +13,7 @@ class FootballBetRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,12 @@ class FootballBetRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'football_match_id' => ['required', 'integer'],
+            'user_id' => ['required', 'integer'],
+            'sum_in' => ['required', 'numeric'],
+            'sum_out' => ['required', 'numeric'],
+            'to_player' => ['required','integer'],
+            'status' => ['required','integer']
         ];
     }
 }

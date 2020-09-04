@@ -23,6 +23,7 @@ class CreateFootballMatches extends Migration
             $table->tinyInteger('winner')->nullable()->unsigned();
             $table->tinyInteger('player_1_goals')->nullable()->unsigned();
             $table->tinyInteger('player_2_goals')->nullable()->unsigned();
+            $table->date('game_date');
             $table->boolean('status');
             $table->timestamps();
         });

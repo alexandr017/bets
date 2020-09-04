@@ -13,7 +13,7 @@ class FootballMatchRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,14 @@ class FootballMatchRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'football_tour_id' => ['required', 'integer'],
+            'player_1' => ['required', 'max:255'],
+            'player_2' => ['required', 'max:255'],
+            'win' => ['required', 'integer'],
+            'player_1_goals' => ['required', 'integer'],
+            'player_2_goals' => ['required', 'integer'],
+            'game_date' => ['required','date'],
+            'status' => ['required','integer']
         ];
     }
 }
