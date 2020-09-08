@@ -16,9 +16,9 @@ class FootballBetsController extends AdminFootballController
         return ResponseAPI($data);
     }
 
-    public function getAllUserBets(Request $request)
+    public function getAllUserBets($userID)
     {
-        $userID = (int) $request['user_id'];
+        $userID = (int) $userID;
 
         $data = FootballBet::where(['user_id' => $userID])->paginate(self::PAGINATE_COUNT);
 
@@ -26,7 +26,7 @@ class FootballBetsController extends AdminFootballController
     }
 
 
-    public function getAllUsersByMatch($matchID)
+    public function getAllUsersByMatchID($matchID)
     {
         $matchID = (int) $matchID;
 

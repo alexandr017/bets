@@ -32,9 +32,9 @@ class FootballMatchesController extends AdminFootballController
 
 
     // все прошедшие игры определенного тура
-    public function getPastMatchesByTourID(Request $request)
+    public function getPastMatchesByTourID($tourID)
     {
-        $tourID = (int) $request['tour_id'];
+        $tourID = (int) $tourID;
 
         $data = FootballMatch
             ::where(['football_tour_id' => $tourID])
@@ -45,14 +45,14 @@ class FootballMatchesController extends AdminFootballController
     }
 
     // предстоящие матчи определенного тура
-    public function getNextMatchesTourID(Request $request)
+    public function getNextMatchesTourID($tourID)
     {
-        $tourID = (int) $request['tour_id'];
+        $tourID = (int) $tourID;
 
         $data = FootballMatch
             ::where(['football_tour_id' => $tourID])
             ->whereDate('game_date', '>', Carbon::now())
-            ->get();
+            ->paginate(self::PAGINATE_COUNT);
 
         return ResponseAPI($data);
     }
@@ -65,7 +65,7 @@ class FootballMatchesController extends AdminFootballController
 
         $data = FootballMatch
             ::whereBetween('game_date', [Carbon::now(), $weekEndDate])
-            ->get();
+            ->paginate(self::PAGINATE_COUNT);
 
         return ResponseAPI($data);
     }
@@ -77,7 +77,7 @@ class FootballMatchesController extends AdminFootballController
 
         $data = FootballMatch
             ::whereBetween('game_date', [Carbon::now(), $weekEndDate])
-            ->get();
+            ->paginate(self::PAGINATE_COUNT);
 
         return ResponseAPI($data);
     }

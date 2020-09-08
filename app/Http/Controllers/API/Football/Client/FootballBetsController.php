@@ -65,7 +65,7 @@ class FootballBetsController extends AdminFootballController
 
 
     // все кто поставил на мачт
-    public function getAllUsersByMatch($matchID)
+    public function getAllUsersByMatchID($matchID)
     {
         $matchID = (int) $matchID;
 

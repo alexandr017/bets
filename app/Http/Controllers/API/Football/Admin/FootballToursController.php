@@ -81,7 +81,7 @@ class FootballToursController extends AdminFootballController
     public function update(FootballTourRequest $request, $id)
     {
         $data = clearData($request->all());
-        $tour = FootballTour::findOrFaild($id);
+        $tour = FootballTour::findOrFail($id);
         $tour->update($data);
 
         return ResponseAPI($tour, 202, 'Updated');
@@ -95,11 +95,20 @@ class FootballToursController extends AdminFootballController
      */
     public function destroy($id)
     {
-        $tour = FootballTour::findOrFaild($id);
+        $tour = FootballTour::findOrFail($id);
         $tour->delete();
         // удалить все привязки
 
         return ResponseAPI([], 410, 'Deleted');
+    }
+
+
+    public function getToursByCategoryID($id)
+    {
+        $id = (int) $id;
+        $data = FootballTour::where(['football_category_id' => $id])->get();
+
+        return ResponseAPI($data);
     }
 
 

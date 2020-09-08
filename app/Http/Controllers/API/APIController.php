@@ -14,34 +14,8 @@ use Tymon\JWTAuth\PayloadFactory;
 use Tymon\JWTAuth\JWTManager as JWT;
 
 /**
- * @OA\Info(
- *     title="Laravel Swagger API documentation fot Bets",
- *     version="1.0.0",
- *     @OA\Contact(
- *         email="admin@example.com"
- *     ),
- *     @OA\License(
- *         name="Apache 2.0",
- *         url="http://www.apache.org/licenses/LICENSE-2.0.html"
- *     )
- * )
- * @OA\Tag(
- *     name="Pages",
- *     description="Some example pages",
- * )
- * @OA\Server(
- *     description="Laravel Swagger API server",
- *     url="http://localhost/api"
- * )
- * @OA\SecurityScheme(
- *     type="apiKey",
- *     in="header",
- *     name="X-APP-ID",
- *     securityScheme="X-APP-ID"
- * )
+ * @OA\Info(title="`Bets API`", version="0.1")
  */
-
-
 
 class APIController extends Controller
 {

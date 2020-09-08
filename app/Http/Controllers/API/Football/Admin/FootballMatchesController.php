@@ -57,7 +57,7 @@ class FootballMatchesController extends AdminFootballController
      */
     public function show($id)
     {
-        $data = FootballTour::findOrFail($id);
+        $data = FootballMatch::findOrFail($id);
 
         return ResponseAPI($data);
     }
@@ -70,7 +70,7 @@ class FootballMatchesController extends AdminFootballController
      */
     public function edit($id)
     {
-        $data = FootballTour::findOrFail($id);
+        $data = FootballMatch::findOrFail($id);
 
         return ResponseAPI($data);
     }
@@ -85,7 +85,7 @@ class FootballMatchesController extends AdminFootballController
     public function update(FootballMatchRequest $request, $id)
     {
         $data = clearData($request->all());
-        $match = FootballMatch::findOrFaild($id);
+        $match = FootballMatch::findOrFail($id);
         $match->update($data);
 
         return ResponseAPI($match, 202, 'Updated');
@@ -99,7 +99,7 @@ class FootballMatchesController extends AdminFootballController
      */
     public function destroy($id)
     {
-        $match = FootballMatch::findOrFaild($id);
+        $match = FootballMatch::findOrFail($id);
         $match->delete();
         // удалить все привязки
 

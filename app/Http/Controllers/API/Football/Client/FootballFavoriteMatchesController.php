@@ -23,10 +23,10 @@ class FootballFavoriteMatchesController extends AdminFootballController
     }
 
 
-    public function setFavorite(Request $request)
+    public function setFavorite($matchID)
     {
         $data = [
-            'football_match_id' => clearData($request['user_id']),
+            'football_match_id' => (int) $matchID,
             'user_id' => Auth::id()
         ];
 
@@ -37,12 +37,12 @@ class FootballFavoriteMatchesController extends AdminFootballController
 
     }
 
-    public function remoteFavorite(Request $request)
+    public function remoteFavorite($matchID)
     {
-        $footballMatchID = clearData($request['user_id']);
+        $matchID = (int) $matchID;
         $userID = Auth::id();
 
-        DB::delete("delete from football_matches where user_id=? and football_match_id=?", [$userID,$footballMatchID]);
+        DB::delete("delete from football_matches where user_id=? and football_match_id=?", [$userID,$matchID]);
 
         return ResponseAPI([], 410, 'Deleted');
     }

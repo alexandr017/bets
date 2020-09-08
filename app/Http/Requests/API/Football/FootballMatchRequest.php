@@ -27,9 +27,9 @@ class FootballMatchRequest extends FormRequest
             'football_tour_id' => ['required', 'integer'],
             'player_1' => ['required', 'max:255'],
             'player_2' => ['required', 'max:255'],
-            'win' => ['required', 'integer'],
-            'player_1_goals' => ['required', 'integer'],
-            'player_2_goals' => ['required', 'integer'],
+            'win' => ['nullable', 'integer'],
+            'player_1_goals' => ['nullable', 'integer'],
+            'player_2_goals' => ['nullable', 'integer'],
             'game_date' => ['required','date'],
             'status' => ['required','integer']
         ];
