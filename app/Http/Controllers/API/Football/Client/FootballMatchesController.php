@@ -10,8 +10,18 @@ use Illuminate\Http\Request;
 
 class FootballMatchesController extends AdminFootballController
 {
-    private const PAGINATE_COUNT = 50;
-
+    /**
+     * @OA\GET(
+     *     path="/api/football/client/matches/get-all-past-matches",
+     *     tags={"Football Matches"},
+     *     @OA\Parameter(name="token", in="query", description="Token auth", required=true),
+     *     @OA\Parameter(name="page", in="query", description="Number of pagination page"),
+     *     @OA\Response(response="200", description="Get all past matches")
+     * )
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     // все прошедшие игры
     public function getAllPastMatches()
     {
@@ -20,7 +30,18 @@ class FootballMatchesController extends AdminFootballController
         return ResponseAPI($data);
     }
 
-
+    /**
+     * @OA\GET(
+     *     path="/api/football/client/matches/get-all-next-matches",
+     *     tags={"Football Matches"},
+     *     @OA\Parameter(name="token", in="query", description="Token auth", required=true),
+     *     @OA\Parameter(name="page", in="query", description="Number of pagination page"),
+     *     @OA\Response(response="200", description="Get all next matches")
+     * )
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     // все будущие игры
     public function getAllNextMatches()
     {
@@ -30,7 +51,18 @@ class FootballMatchesController extends AdminFootballController
     }
 
 
-
+    /**
+     * @OA\GET(
+     *     path="/api/football/client/matches/get-past-matches-by-tour-id/{tourID}",
+     *     tags={"Football Matches"},
+     *     @OA\Parameter(name="token", in="query", description="Token auth", required=true),
+     *     @OA\Parameter(name="page", in="query", description="Number of pagination page"),
+     *     @OA\Response(response="200", description="Get all past matches by tour ID")
+     * )
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     // все прошедшие игры определенного тура
     public function getPastMatchesByTourID($tourID)
     {
@@ -44,6 +76,19 @@ class FootballMatchesController extends AdminFootballController
         return ResponseAPI($data);
     }
 
+
+    /**
+     * @OA\GET(
+     *     path="/api/football/client/matches/get-next-matches-tour-id/{tourID}",
+     *     tags={"Football Matches"},
+     *     @OA\Parameter(name="token", in="query", description="Token auth", required=true),
+     *     @OA\Parameter(name="page", in="query", description="Number of pagination page"),
+     *     @OA\Response(response="200", description="Get all next matches by tour ID")
+     * )
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     // предстоящие матчи определенного тура
     public function getNextMatchesTourID($tourID)
     {
@@ -57,7 +102,18 @@ class FootballMatchesController extends AdminFootballController
         return ResponseAPI($data);
     }
 
-
+    /**
+     * @OA\GET(
+     *     path="/api/football/client/matches/get-matches-on-next-week",
+     *     tags={"Football Matches"},
+     *     @OA\Parameter(name="token", in="query", description="Token auth", required=true),
+     *     @OA\Parameter(name="page", in="query", description="Number of pagination page"),
+     *     @OA\Response(response="200", description="Get all matches on next week")
+     * )
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     //На этой неделе
     public function getMatchesOnNextWeek()
     {
@@ -70,6 +126,18 @@ class FootballMatchesController extends AdminFootballController
         return ResponseAPI($data);
     }
 
+    /**
+     * @OA\GET(
+     *     path="/api/football/client/matches/get-matches-on-nex-month",
+     *     tags={"Football Matches"},
+     *     @OA\Parameter(name="token", in="query", description="Token auth", required=true),
+     *     @OA\Parameter(name="page", in="query", description="Number of pagination page"),
+     *     @OA\Response(response="200", description="Get all matches on next month")
+     * )
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     //В этом месяце
     public function getMatchesOnNexMonth()
     {

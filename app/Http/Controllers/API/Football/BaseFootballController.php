@@ -8,5 +8,5 @@ use App\Http\Controllers\API\APIController;
 
 class BaseFootballController extends APIController
 {
-
+    protected const PAGINATE_COUNT = 50;
 }

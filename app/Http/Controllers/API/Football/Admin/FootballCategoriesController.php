@@ -9,12 +9,10 @@ use Auth;
 
 class FootballCategoriesController extends AdminFootballController
 {
-    private const PAGINATE_COUNT = 50;
-
     /**
      * @OA\GET(
      *     path="/api/football/admin/categories",
-     *     tags={"Football Categories", "Admin"},
+     *     tags={"Football Categories"},
      *     @OA\Parameter(name="token", in="query", description="Token auth", required=true),
      *     @OA\Parameter(name="page", in="query", description="Number of pagination page"),
      *     @OA\Response(response="200", description="Display a listing of the resource")
@@ -30,22 +28,13 @@ class FootballCategoriesController extends AdminFootballController
         return ResponseAPI($data);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * @OA\POST(
      *     path="/api/football/admin/categories",
-     *     tags={"Football Categories", "Admin"},
+     *     tags={"Football Categories"},
      *     @OA\Parameter(name="token", in="query", description="Token auth", required=true),
-     *     @OA\Parameter(name="category_title", in="query", description="Title of football category"),
+     *     @OA\Parameter(name="category_title", in="query", description="Title of football category", required=true),
      *     @OA\Response(response="201", description="Store a newly created resource in storage")
      * )
      * Store a newly created resource in storage.
@@ -65,7 +54,7 @@ class FootballCategoriesController extends AdminFootballController
     /**
      * @OA\GET(
      *     path="/api/football/admin/categories/{id}",
-     *     tags={"Football Categories", "Admin"},
+     *     tags={"Football Categories"},
      *     @OA\Parameter(name="token", in="query", description="Token auth", required=true),
      *     @OA\Response(response="200", description="Display the specified resource")
      * )
@@ -82,30 +71,11 @@ class FootballCategoriesController extends AdminFootballController
     }
 
     /**
-     * @OA\GET(
-     *     path="/api/football/admin/categories/{id}/edit",
-     *     tags={"Football Categories", "Admin"},
-     *     @OA\Parameter(name="token", in="query", description="Token auth", required=true),
-     *     @OA\Response(response="200", description="Show the form for editing the specified resource.")
-     * )
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        $data = FootballCategory::findOrFail($id);
-
-        return ResponseAPI($data);
-    }
-
-    /**
      * @OA\PUT(
      *     path="/api/football/admin/categories/{id}",
-     *     tags={"Football Categories", "Admin"},
+     *     tags={"Football Categories"},
      *     @OA\Parameter(name="token", in="query", description="Token auth", required=true),
-     *     @OA\Parameter(name="category_title", in="query", description="Title of football category"),
+     *     @OA\Parameter(name="category_title", in="query", description="Title of football category", required=true),
      *     @OA\Response(response="202", description="Update the specified resource in storage.")
      * )
      * Update the specified resource in storage.
@@ -126,7 +96,7 @@ class FootballCategoriesController extends AdminFootballController
     /**
      * @OA\DELETE(
      *     path="/api/football/admin/categories/{id}",
-     *     tags={"Football Categories", "Admin"},
+     *     tags={"Football Categories"},
      *     @OA\Parameter(name="token", in="query", description="Token auth", required=true),
      *     @OA\Response(response="410", description="Remove the specified resource from storage.")
      * )

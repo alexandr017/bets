@@ -16,7 +16,20 @@ use Tymon\JWTAuth\JWTManager as JWT;
 
 class UserController extends Controller
 {
-
+    /**
+     * @OA\POST(
+     *     path="/api/register",
+     *     tags={"Auth"},
+     *     @OA\Parameter(name="first_name", in="query", description="First Name [string]", required=true),
+     *     @OA\Parameter(name="last_name", in="query", description="Last Name [string]", required=true),
+     *     @OA\Parameter(name="email", in="query", description="Email [email]", required=true),
+     *     @OA\Parameter(name="password", in="query", description="Password [string|min:6]", required=true),
+     *     @OA\Response(response="201", description="Get all long line bets of current user")
+     * )
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function register(Request $request)
     {
         $validator = Validator::make($request->json()->all() , [
@@ -43,6 +56,18 @@ class UserController extends Controller
         return response()->json(compact('user','token'),201);
     }
 
+    /**
+     * @OA\POST(
+     *     path="/api/login",
+     *     tags={"Auth"},
+     *     @OA\Parameter(name="email", in="query", description="Email [email]", required=true),
+     *     @OA\Parameter(name="password", in="query", description="Password [string|min:6]", required=true),
+     *     @OA\Response(response="201", description="Get all long line bets of current user")
+     * )
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function login(Request $request)
     {
         $credentials = $request->json()->all();

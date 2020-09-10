@@ -7,15 +7,37 @@ use Illuminate\Http\Request;
 
 class FootballBetsController extends AdminFootballController
 {
-    private const PAGINATE_COUNT = 50;
-
+    /**
+     * @OA\GET(
+     *     path="/api/football/admin/bets/get-all-users-bets",
+     *     tags={"Football Bets"},
+     *     @OA\Parameter(name="token", in="query", description="Token auth", required=true),
+     *     @OA\Parameter(name="page", in="query", description="Number of pagination page"),
+     *     @OA\Response(response="200", description="Get all bets all users")
+     * )
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function getAllUsersBets()
     {
-        $data = FootballBet::paginate(self::PAGINATE_COUNT);
+        $data = FootballBet::query()->paginate(self::PAGINATE_COUNT);
 
         return ResponseAPI($data);
     }
 
+    /**
+     * @OA\GET(
+     *     path="/api/football/admin/bets/get-all-user-bets/{userID}",
+     *     tags={"Football Bets"},
+     *     @OA\Parameter(name="token", in="query", description="Token auth", required=true),
+     *     @OA\Parameter(name="page", in="query", description="Number of pagination page"),
+     *     @OA\Response(response="200", description="Get all bets by user ID")
+     * )
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function getAllUserBets($userID)
     {
         $userID = (int) $userID;
@@ -25,7 +47,18 @@ class FootballBetsController extends AdminFootballController
         return ResponseAPI($data);
     }
 
-
+    /**
+     * @OA\GET(
+     *     path="/api/football/admin/bets/get-all-users-by-match-id/{matchID}",
+     *     tags={"Football Bets"},
+     *     @OA\Parameter(name="token", in="query", description="Token auth", required=true),
+     *     @OA\Parameter(name="page", in="query", description="Number of pagination page"),
+     *     @OA\Response(response="200", description="Get all bets by match ID")
+     * )
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function getAllUsersByMatchID($matchID)
     {
         $matchID = (int) $matchID;

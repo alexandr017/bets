@@ -9,8 +9,18 @@ use Illuminate\Http\Request;
 
 class FootballBetsController extends AdminFootballController
 {
-    private const PAGINATE_COUNT = 50;
-
+    /**
+     * @OA\GET(
+     *     path="/api/football/client/bets/get-all-user-bets",
+     *     tags={"Football Bets"},
+     *     @OA\Parameter(name="token", in="query", description="Token auth", required=true),
+     *     @OA\Parameter(name="page", in="query", description="Number of pagination page"),
+     *     @OA\Response(response="200", description="Get all bets current user")
+     * )
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     // Все
     public function getAllUserBets()
     {
@@ -21,6 +31,18 @@ class FootballBetsController extends AdminFootballController
         return ResponseAPI($data);
     }
 
+    /**
+     * @OA\GET(
+     *     path="/api/football/client/bets/get-user-bets-on-last-week",
+     *     tags={"Football Bets"},
+     *     @OA\Parameter(name="token", in="query", description="Token auth", required=true),
+     *     @OA\Parameter(name="page", in="query", description="Number of pagination page"),
+     *     @OA\Response(response="200", description="Get all bets from last week of current user")
+     * )
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     // на прошлой неделе
     public function getUserBetsOnLastWeek()
     {
@@ -30,11 +52,23 @@ class FootballBetsController extends AdminFootballController
             ->leftJoin('football_matches','football_bets.football_match_id','football_matches.id')
             ->select('football_bets.*')
             ->whereBetween('football_matches.game_date', [Carbon::now(), $weekEndDate])
-            ->get();
+            ->paginate(self::PAGINATE_COUNT);
 
         return ResponseAPI($data);
     }
 
+    /**
+     * @OA\GET(
+     *     path="/api/football/client/bets/get-user-bets-on-nex-month",
+     *     tags={"Football Bets"},
+     *     @OA\Parameter(name="token", in="query", description="Token auth", required=true),
+     *     @OA\Parameter(name="page", in="query", description="Number of pagination page"),
+     *     @OA\Response(response="200", description="Get all bets from next month of current user")
+     * )
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     //В этом месяце
     public function getUserBetsOnNexMonth()
     {
@@ -44,11 +78,23 @@ class FootballBetsController extends AdminFootballController
             ->leftJoin('football_matches','football_bets.football_match_id','football_matches.id')
             ->select('football_bets.*')
             ->whereBetween('football_matches.game_date', [Carbon::now(), $weekEndDate])
-            ->get();
+            ->paginate(self::PAGINATE_COUNT);
 
         return ResponseAPI($data);
     }
 
+    /**
+     * @OA\GET(
+     *     path="/api/football/client/bets/get-user-long-line-bets",
+     *     tags={"Football Bets"},
+     *     @OA\Parameter(name="token", in="query", description="Token auth", required=true),
+     *     @OA\Parameter(name="page", in="query", description="Number of pagination page"),
+     *     @OA\Response(response="200", description="Get all long line bets of current user")
+     * )
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     //Долгострочные
     public function getUserLongLineBets()
     {
@@ -63,7 +109,18 @@ class FootballBetsController extends AdminFootballController
         return ResponseAPI($data);
     }
 
-
+    /**
+     * @OA\GET(
+     *     path="/api/football/client/bets/get-all-users-by-match-id/{matchID}",
+     *     tags={"Football Bets"},
+     *     @OA\Parameter(name="token", in="query", description="Token auth", required=true),
+     *     @OA\Parameter(name="page", in="query", description="Number of pagination page"),
+     *     @OA\Response(response="200", description="Get all bets users by match ID")
+     * )
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     // все кто поставил на мачт
     public function getAllUsersByMatchID($matchID)
     {

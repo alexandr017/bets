@@ -3,16 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="3936546e-18f9-4db9-964c-b4fd3c5ece5b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helpers/ResponseAPI.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/ResponseAPI.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/APIController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/APIController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/Football/Admin/FootballBetsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/Admin/FootballBetsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/Football/Admin/FootballCategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/Admin/FootballCategoriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/Football/Admin/FootballFavoriteMatchesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/Admin/FootballFavoriteMatchesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/Football/Admin/FootballMatchesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/Admin/FootballMatchesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/Football/Admin/FootballToursController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/Admin/FootballToursController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/Football/BaseFootballController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/BaseFootballController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/Football/Client/FootballBetsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/Client/FootballBetsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/Football/Client/FootballCategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/Client/FootballCategoriesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/Football/Client/FootballFavoriteMatchesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/Client/FootballFavoriteMatchesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/Football/Client/FootballMatchesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/Client/FootballMatchesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/API/Football/FootballMatchRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/API/Football/FootballMatchRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/Football/Client/FootballToursController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/Football/Client/FootballToursController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -219,7 +221,7 @@
       <workItem from="1595705538732" duration="2681000" />
       <workItem from="1596898820687" duration="266000" />
       <workItem from="1598111080393" duration="68338000" />
-      <workItem from="1598647136110" duration="86797000" />
+      <workItem from="1598647136110" duration="103069000" />
     </task>
     <task id="LOCAL-00001" summary="JWT auth">
       <created>1595065477795</created>
@@ -284,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599257093261</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Swagger Football Categories">
+      <created>1599599357258</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1599599357258</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,7 +318,8 @@
     <MESSAGE value="Test registration, auth, football categories" />
     <MESSAGE value="football dev" />
     <MESSAGE value="football final methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="football final methods" />
+    <MESSAGE value="Swagger Football Categories" />
+    <option name="LAST_COMMIT_MESSAGE" value="Swagger Football Categories" />
   </component>
   <component name="WindowStateProjectService">
     <state x="455" y="232" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598121623722">
@@ -332,13 +342,13 @@
       <screen x="0" y="23" width="1440" height="798" />
     </state>
     <state x="379" y="83" key="#phpunit.xml/0.23.1440.798/1440.23.1920.1057@0.23.1440.798" timestamp="1598650397486" />
-    <state x="324" y="31" key="CommitChangelistDialog2" timestamp="1599257093011">
-      <screen x="0" y="23" width="1440" height="804" />
+    <state x="314" y="25" key="CommitChangelistDialog2" timestamp="1599599356791">
+      <screen x="0" y="23" width="1440" height="806" />
     </state>
     <state x="526" y="26" key="CommitChangelistDialog2/0.23.1440.798@0.23.1440.798" timestamp="1598121939936" />
     <state x="314" y="25" key="CommitChangelistDialog2/0.23.1440.799@0.23.1440.799" timestamp="1595079772616" />
     <state x="324" y="31" key="CommitChangelistDialog2/0.23.1440.804@0.23.1440.804" timestamp="1599257093011" />
-    <state x="314" y="25" key="CommitChangelistDialog2/0.23.1440.806@0.23.1440.806" timestamp="1595066885503" />
+    <state x="314" y="25" key="CommitChangelistDialog2/0.23.1440.806@0.23.1440.806" timestamp="1599599356790" />
     <state x="486" y="245" key="NewPhpClassDialog" timestamp="1598116074078">
       <screen x="0" y="23" width="1440" height="798" />
     </state>
@@ -349,11 +359,12 @@
     <state x="541" y="350" key="NewPhpFileDialog/0.23.1440.798@0.23.1440.798" timestamp="1598116091262" />
     <state x="541" y="352" key="NewPhpFileDialog/0.23.1440.804@0.23.1440.804" timestamp="1598112842516" />
     <state x="541" y="353" key="NewPhpFileDialog/0.23.1440.806@0.23.1440.806" timestamp="1599250256429" />
-    <state x="320" y="163" key="Vcs.Push.Dialog.v2" timestamp="1599257121128">
-      <screen x="0" y="23" width="1440" height="804" />
+    <state x="320" y="163" key="Vcs.Push.Dialog.v2" timestamp="1599599375221">
+      <screen x="0" y="23" width="1440" height="806" />
     </state>
     <state x="320" y="162" key="Vcs.Push.Dialog.v2/0.23.1440.798@0.23.1440.798" timestamp="1598121973793" />
     <state x="320" y="163" key="Vcs.Push.Dialog.v2/0.23.1440.804@0.23.1440.804" timestamp="1599257121128" />
+    <state x="320" y="163" key="Vcs.Push.Dialog.v2/0.23.1440.806@0.23.1440.806" timestamp="1599599375221" />
     <state x="101" y="123" width="1239" height="599" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1595706246807">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
@@ -362,10 +373,11 @@
       <screen x="0" y="23" width="1440" height="799" />
     </state>
     <state x="403" y="255" key="com.intellij.ide.util.TipDialog/0.23.1440.799@0.23.1440.799" timestamp="1594538715779" />
-    <state x="385" y="191" width="670" height="675" key="run.anything.popup" timestamp="1598439471631">
-      <screen x="0" y="23" width="1440" height="798" />
+    <state x="385" y="193" width="670" height="682" key="run.anything.popup" timestamp="1599756590404">
+      <screen x="0" y="23" width="1440" height="806" />
     </state>
     <state x="385" y="191" width="670" height="675" key="run.anything.popup/0.23.1440.798@0.23.1440.798" timestamp="1598439471631" />
+    <state x="385" y="193" width="670" height="682" key="run.anything.popup/0.23.1440.806@0.23.1440.806" timestamp="1599756590404" />
     <state x="385" y="145" width="670" height="676" key="search.everywhere.popup" timestamp="1598648523151">
       <screen x="0" y="23" width="1440" height="798" />
     </state>
