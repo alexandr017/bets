@@ -1,0 +1,1051 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "`Bets API`",
+        "version": "0.1"
+    },
+    "paths": {
+        "/api/football/admin/bets/get-all-users-bets": {
+            "get": {
+                "tags": [
+                    "Football Bets"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Admin\\FootballBetsController::getAllUsersBets",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Number of pagination page"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get all bets all users"
+                    }
+                }
+            }
+        },
+        "/api/football/admin/bets/get-all-user-bets/{userID}": {
+            "get": {
+                "tags": [
+                    "Football Bets"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Admin\\FootballBetsController::getAllUserBets",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Number of pagination page"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get all bets by user ID"
+                    }
+                }
+            }
+        },
+        "/api/football/admin/bets/get-all-users-by-match-id/{matchID}": {
+            "get": {
+                "tags": [
+                    "Football Bets"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Admin\\FootballBetsController::getAllUsersByMatchID",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Number of pagination page"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get all bets by match ID"
+                    }
+                }
+            }
+        },
+        "/api/football/admin/categories": {
+            "get": {
+                "tags": [
+                    "Football Categories"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Admin\\FootballCategoriesController::index",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Number of pagination page"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Display a listing of the resource"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Football Categories"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Admin\\FootballCategoriesController::store",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "category_title",
+                        "in": "query",
+                        "description": "Title of football category",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Store a newly created resource in storage"
+                    }
+                }
+            }
+        },
+        "/api/football/admin/categories/{id}": {
+            "get": {
+                "tags": [
+                    "Football Categories"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Admin\\FootballCategoriesController::show",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Display the specified resource"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Football Categories"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Admin\\FootballCategoriesController::update",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "category_title",
+                        "in": "query",
+                        "description": "Title of football category",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "202": {
+                        "description": "Update the specified resource in storage."
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Football Categories"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Admin\\FootballCategoriesController::destroy",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "410": {
+                        "description": "Remove the specified resource from storage."
+                    }
+                }
+            }
+        },
+        "/api/football/admin/favorite-matches/get-favorite-matches-all-users": {
+            "get": {
+                "tags": [
+                    "Football Favorites Matches"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Admin\\FootballFavoriteMatchesController::getFavoriteMatchesAllUsers",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Number of pagination page"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get all favorites matches all users"
+                    }
+                }
+            }
+        },
+        "/api/football/admin/matches": {
+            "get": {
+                "tags": [
+                    "Football Matches"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Admin\\FootballMatchesController::index",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Number of pagination page"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Display a listing of the resource"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Football Matches"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Admin\\FootballMatchesController::store",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "football_tour_id",
+                        "in": "query",
+                        "description": "ID of football tour [integer]",
+                        "required": true
+                    },
+                    {
+                        "name": "player_1",
+                        "in": "query",
+                        "description": "Player 1 name [string]",
+                        "required": true
+                    },
+                    {
+                        "name": "player_2",
+                        "in": "query",
+                        "description": "Player 2 name [string]",
+                        "required": true
+                    },
+                    {
+                        "name": "win",
+                        "in": "query",
+                        "description": "Winner [integer:-1/0/1]"
+                    },
+                    {
+                        "name": "player_1_goals",
+                        "in": "query",
+                        "description": "Goals of player 1 [integer]"
+                    },
+                    {
+                        "name": "player_2_goals",
+                        "in": "query",
+                        "description": "Goals of player 2 [integer]"
+                    },
+                    {
+                        "name": "game_date",
+                        "in": "query",
+                        "description": "Match date [date]",
+                        "required": true
+                    },
+                    {
+                        "name": "status",
+                        "in": "query",
+                        "description": "Match status [integer]",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Store a newly created resource in storage"
+                    }
+                }
+            }
+        },
+        "/api/football/admin/matches/{id}": {
+            "get": {
+                "tags": [
+                    "Football Matches"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Admin\\FootballMatchesController::show",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Display the specified resource"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Football Matches"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Admin\\FootballMatchesController::update",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "football_tour_id",
+                        "in": "query",
+                        "description": "ID of football tour [integer]",
+                        "required": true
+                    },
+                    {
+                        "name": "player_1",
+                        "in": "query",
+                        "description": "Player 1 name [string]",
+                        "required": true
+                    },
+                    {
+                        "name": "player_2",
+                        "in": "query",
+                        "description": "Player 2 name [string]",
+                        "required": true
+                    },
+                    {
+                        "name": "win",
+                        "in": "query",
+                        "description": "Winner [integer:-1/0/1]"
+                    },
+                    {
+                        "name": "player_1_goals",
+                        "in": "query",
+                        "description": "Goals of player 1 [integer]"
+                    },
+                    {
+                        "name": "player_2_goals",
+                        "in": "query",
+                        "description": "Goals of player 2 [integer]"
+                    },
+                    {
+                        "name": "game_date",
+                        "in": "query",
+                        "description": "Match date [date]",
+                        "required": true
+                    },
+                    {
+                        "name": "status",
+                        "in": "query",
+                        "description": "Match status [integer]",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "202": {
+                        "description": "Update the specified resource in storage."
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Football Matches"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Admin\\FootballMatchesController::destroy",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "410": {
+                        "description": "Remove the specified resource from storage."
+                    }
+                }
+            }
+        },
+        "/api/football/admin/tours": {
+            "get": {
+                "tags": [
+                    "Football Tours"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Admin\\FootballToursController::index",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Number of pagination page"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Display a listing of the resource"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Football Tours"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Admin\\FootballToursController::store",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "football_category_id",
+                        "in": "query",
+                        "description": "ID of football category",
+                        "required": true
+                    },
+                    {
+                        "name": "tour_title",
+                        "in": "query",
+                        "description": "Title of football category",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Store a newly created resource in storage"
+                    }
+                }
+            }
+        },
+        "/api/football/admin/tours/{id}": {
+            "get": {
+                "tags": [
+                    "Football Tours"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Admin\\FootballToursController::show",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Display the specified resource"
+                    }
+                }
+            }
+        },
+        "/api/football/admin/torus/{id}": {
+            "put": {
+                "tags": [
+                    "Football Tours"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Admin\\FootballToursController::update",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "football_category_id",
+                        "in": "query",
+                        "description": "ID of football category",
+                        "required": true
+                    },
+                    {
+                        "name": "tour_title",
+                        "in": "query",
+                        "description": "Title of football category",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "202": {
+                        "description": "Update the specified resource in storage."
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Football Tours"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Admin\\FootballToursController::destroy",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "410": {
+                        "description": "Remove the specified resource from storage."
+                    }
+                }
+            }
+        },
+        "/api/football/admin/tours/get-tours-by-category-id/{id}": {
+            "get": {
+                "tags": [
+                    "Football Tours"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Admin\\FootballToursController::getToursByCategoryID",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Number of pagination page"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Display a listing of the resource"
+                    }
+                }
+            }
+        },
+        "/api/football/client/bets/get-all-user-bets": {
+            "get": {
+                "tags": [
+                    "Football Bets"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Client\\FootballBetsController::getAllUserBets",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Number of pagination page"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get all bets current user"
+                    }
+                }
+            }
+        },
+        "/api/football/client/bets/get-user-bets-on-last-week": {
+            "get": {
+                "tags": [
+                    "Football Bets"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Client\\FootballBetsController::getUserBetsOnLastWeek",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Number of pagination page"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get all bets from last week of current user"
+                    }
+                }
+            }
+        },
+        "/api/football/client/bets/get-user-bets-on-nex-month": {
+            "get": {
+                "tags": [
+                    "Football Bets"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Client\\FootballBetsController::getUserBetsOnNexMonth",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Number of pagination page"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get all bets from next month of current user"
+                    }
+                }
+            }
+        },
+        "/api/football/client/bets/get-user-long-line-bets": {
+            "get": {
+                "tags": [
+                    "Football Bets"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Client\\FootballBetsController::getUserLongLineBets",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Number of pagination page"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get all long line bets of current user"
+                    }
+                }
+            }
+        },
+        "/api/football/client/bets/get-all-users-by-match-id/{matchID}": {
+            "get": {
+                "tags": [
+                    "Football Bets"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Client\\FootballBetsController::getAllUsersByMatchID",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Number of pagination page"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get all bets users by match ID"
+                    }
+                }
+            }
+        },
+        "/api/football/client/categories/get-all-categories": {
+            "get": {
+                "tags": [
+                    "Football Categories"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Client\\FootballCategoriesController::getAllCategories",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Number of pagination page"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Display a listing of the resource"
+                    }
+                }
+            }
+        },
+        "/api/football/client/favorite-matches/get-favorites": {
+            "get": {
+                "tags": [
+                    "Football Favorites Matches"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Client\\FootballFavoriteMatchesController::getFavorites",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Number of pagination page"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get all favorites matches of current user"
+                    }
+                }
+            }
+        },
+        "/api/football/client/favorite-matches/set-favorite/{matchID}": {
+            "post": {
+                "tags": [
+                    "Football Favorites Matches"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Client\\FootballFavoriteMatchesController::setFavorite",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Set favorite match for current user"
+                    }
+                }
+            }
+        },
+        "/api/football/client/favorite-matches/remote-favorite/{matchID}": {
+            "delete": {
+                "tags": [
+                    "Football Favorites Matches"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Client\\FootballFavoriteMatchesController::remoteFavorite",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "410": {
+                        "description": "Delete favorite match for current user"
+                    }
+                }
+            }
+        },
+        "/api/football/client/matches/get-all-past-matches": {
+            "get": {
+                "tags": [
+                    "Football Matches"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Client\\FootballMatchesController::getAllPastMatches",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Number of pagination page"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get all past matches"
+                    }
+                }
+            }
+        },
+        "/api/football/client/matches/get-all-next-matches": {
+            "get": {
+                "tags": [
+                    "Football Matches"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Client\\FootballMatchesController::getAllNextMatches",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Number of pagination page"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get all next matches"
+                    }
+                }
+            }
+        },
+        "/api/football/client/matches/get-past-matches-by-tour-id/{tourID}": {
+            "get": {
+                "tags": [
+                    "Football Matches"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Client\\FootballMatchesController::getPastMatchesByTourID",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Number of pagination page"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get all past matches by tour ID"
+                    }
+                }
+            }
+        },
+        "/api/football/client/matches/get-next-matches-tour-id/{tourID}": {
+            "get": {
+                "tags": [
+                    "Football Matches"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Client\\FootballMatchesController::getNextMatchesTourID",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Number of pagination page"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get all next matches by tour ID"
+                    }
+                }
+            }
+        },
+        "/api/football/client/matches/get-matches-on-next-week": {
+            "get": {
+                "tags": [
+                    "Football Matches"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Client\\FootballMatchesController::getMatchesOnNextWeek",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Number of pagination page"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get all matches on next week"
+                    }
+                }
+            }
+        },
+        "/api/football/client/matches/get-matches-on-nex-month": {
+            "get": {
+                "tags": [
+                    "Football Matches"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Client\\FootballMatchesController::getMatchesOnNexMonth",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Number of pagination page"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get all matches on next month"
+                    }
+                }
+            }
+        },
+        "/api/football/client/tours/get-tours-by-category-id/{id}": {
+            "get": {
+                "tags": [
+                    "Football Tours"
+                ],
+                "operationId": "App\\Http\\Controllers\\API\\Football\\Client\\FootballToursController::getToursByCategoryID",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token auth",
+                        "required": true
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Number of pagination page"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Display a listing of the resource"
+                    }
+                }
+            }
+        },
+        "/api/register": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "operationId": "App\\Http\\Controllers\\UserController::register",
+                "parameters": [
+                    {
+                        "name": "first_name",
+                        "in": "query",
+                        "description": "First Name [string]",
+                        "required": true
+                    },
+                    {
+                        "name": "last_name",
+                        "in": "query",
+                        "description": "Last Name [string]",
+                        "required": true
+                    },
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "description": "Email [email]",
+                        "required": true
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "description": "Password [string|min:6]",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Get all long line bets of current user"
+                    }
+                }
+            }
+        },
+        "/api/login": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "operationId": "App\\Http\\Controllers\\UserController::login",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "description": "Email [email]",
+                        "required": true
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "description": "Password [string|min:6]",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Get all long line bets of current user"
+                    }
+                }
+            }
+        }
+    }
+}
