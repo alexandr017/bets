@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class TicketMessage extends Model
 {
-    protected $table = 'tickets_messages';
+    protected $table = 'user_appeal_messages';
 
-    protected $fillable = ['ticket_id','user_id','message','status'];
+    protected $fillable = ['user_appeal_theme_id','sender','message','status','status_for_admin','status_for_user'];
 
 }

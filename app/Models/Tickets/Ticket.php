@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ticket extends Model
 {
-    protected $table = 'tickets';
+    protected $table = 'user_appeal_themes';
 
-    protected $fillable = ['theme','user_id'];
+    protected $fillable = ['user_id', 'theme', 'status'];
 }
